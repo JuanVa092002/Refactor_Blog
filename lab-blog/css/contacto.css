@@ -1,0 +1,241 @@
+/* Contacto — Paula (paleta unificada) */
+
+.contacto-page *,
+.contacto-page *::before,
+.contacto-page *::after {
+  box-sizing: border-box;
+}
+
+.contacto-page .cards-container {
+  max-width: var(--max-width);
+  margin: -3.5rem auto 3.5rem;
+  padding: 0 1.25rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+  position: relative;
+  z-index: 10;
+}
+
+.contacto-page .info-card {
+  background-color: var(--brand-blanco);
+  padding: 2.5rem 1.75rem 1.75rem;
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-card);
+  position: relative;
+  border-top: 5px solid var(--brand-verde);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contacto-page .info-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.12);
+}
+
+.contacto-page .info-card.featured {
+  border-top-color: var(--brand-amarillo);
+}
+
+.contacto-page .icon-badge {
+  position: absolute;
+  top: -1.5rem;
+  left: 1.75rem;
+  width: 50px;
+  height: 50px;
+  background-color: var(--brand-amarillo);
+  color: var(--brand-azul);
+  border-radius: 50%;
+  text-align: center;
+  line-height: 50px;
+  font-size: 1.25rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.contacto-page .info-card.featured .icon-badge {
+  background-color: var(--brand-acento);
+  color: var(--brand-blanco);
+}
+
+.contacto-page .info-card h3 {
+  font-size: 1.25rem;
+  margin: 0 0 0.75rem;
+  font-weight: 600;
+  color: var(--brand-azul);
+}
+
+.contacto-page .info-card p {
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: var(--brand-texto-muted);
+  margin: 0 0 1.25rem;
+}
+
+.contacto-page .info-card .card-link {
+  color: var(--brand-acento);
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: bold;
+}
+
+.contacto-page .main-content {
+  max-width: var(--max-width);
+  margin: 0 auto 5rem;
+  padding: 0 1.25rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.5rem;
+}
+
+.contacto-page .column-left h2 {
+  font-size: 1.8rem;
+  color: var(--brand-azul);
+  margin: 0 0 1rem;
+}
+
+.contacto-page .column-left > p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin: 0 0 1.5rem;
+  color: var(--brand-texto-muted);
+}
+
+.contacto-page .time-list {
+  list-style: none;
+  margin: 0 0 1.75rem;
+  padding: 0;
+}
+
+.contacto-page .time-list li {
+  margin-bottom: 0.75rem;
+  font-size: 0.95rem;
+}
+
+.contacto-page .time-list li i {
+  margin-right: 0.65rem;
+  color: var(--brand-acento);
+}
+
+.contacto-page .column-left h4 {
+  font-size: 1.1rem;
+  margin: 0 0 1rem;
+  color: var(--brand-azul);
+}
+
+.contacto-page .map-box {
+  width: 100%;
+  height: 250px;
+  background-color: var(--brand-crema);
+  border-radius: 12px;
+  border: 4px solid var(--brand-blanco);
+  box-shadow: var(--shadow-card);
+  position: relative;
+}
+
+.contacto-page .map-fallback {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: var(--brand-texto-muted);
+  font-weight: 500;
+}
+
+.contacto-page .map-fallback p {
+  margin: 0.5rem 0 0;
+}
+
+.contacto-page .form-box {
+  background-color: var(--brand-blanco);
+  padding: 2.5rem;
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-card);
+  border-top: 5px solid var(--brand-verde);
+}
+
+.contacto-page .form-badge {
+  display: inline-block;
+  background-color: var(--brand-crema);
+  color: var(--brand-azul);
+  padding: 0.25rem 0.75rem;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: bold;
+  margin-bottom: 0.75rem;
+}
+
+.contacto-page .form-box h2 {
+  font-size: 2rem;
+  color: var(--brand-azul);
+  margin: 0 0 1.5rem;
+}
+
+.contacto-page .form-group {
+  margin-bottom: 1.25rem;
+}
+
+.contacto-page .form-group label {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: var(--brand-texto);
+}
+
+.contacto-page .form-group input,
+.contacto-page .form-group textarea {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1.5px solid var(--brand-verde);
+  background-color: var(--brand-crema);
+  border-radius: 8px;
+  font-size: 0.9rem;
+  color: var(--brand-texto);
+  font-family: inherit;
+  transition: 0.3s;
+}
+
+.contacto-page .form-group input:focus,
+.contacto-page .form-group textarea:focus {
+  outline: none;
+  border-color: var(--brand-azul);
+  background-color: var(--brand-blanco);
+}
+
+.contacto-page .btn-submit {
+  display: inline-block;
+  background-color: var(--brand-amarillo);
+  color: var(--brand-azul);
+  border: none;
+  padding: 0.85rem 1.75rem;
+  border-radius: var(--radius-pill);
+  font-size: 0.95rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+  box-shadow: 0 4px 10px rgba(240, 208, 81, 0.35);
+  font-family: inherit;
+}
+
+.contacto-page .btn-submit:hover {
+  background-color: var(--brand-acento);
+  color: var(--brand-blanco);
+  box-shadow: 0 4px 10px rgba(205, 33, 42, 0.3);
+}
+
+.contacto-page .map-fallback .map-icon {
+  color: var(--brand-azul);
+  margin-bottom: 0.5rem;
+}
+
+@media (max-width: 768px) {
+  .contacto-page .cards-container,
+  .contacto-page .main-content {
+    grid-template-columns: 1fr;
+  }
+
+  .contacto-page .cards-container {
+    margin-top: -2.5rem;
+  }
+}

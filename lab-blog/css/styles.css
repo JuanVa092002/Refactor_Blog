@@ -1,0 +1,300 @@
+/* Página de inicio — paleta unificada (variables en navigation.css) */
+
+@import url("https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,600;8..60,700&display=swap");
+
+.inicio {
+  font-family: "Poppins", system-ui, sans-serif;
+  color: var(--brand-texto);
+  background: var(--brand-crema);
+}
+
+/* Cabecera del blog */
+.blog-header {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 2.5rem 1.5rem 1.5rem;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1.5rem;
+  background-color: var(--brand-blanco);
+  border-bottom: 1px solid var(--brand-verde);
+}
+
+.blog-header__brand {
+  display: flex;
+  gap: 1rem;
+}
+
+.blog-header__logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: var(--brand-amarillo);
+  color: var(--brand-azul);
+  font-weight: 700;
+  font-size: 1.5rem;
+  flex-shrink: 0;
+  box-shadow: 0 2px 8px rgba(15, 76, 129, 0.15);
+}
+
+.blog-header__title {
+  font-family: "Source Serif 4", Georgia, serif;
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin-bottom: 0.35rem;
+  color: var(--brand-azul);
+}
+
+.blog-header__meta {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+  color: var(--nav-text-muted);
+}
+
+.blog-header__avatars {
+  display: flex;
+  align-items: center;
+}
+
+.blog-header__avatars span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  margin-left: -6px;
+  border-radius: 50%;
+  border: 2px solid var(--nav-white);
+  background: var(--nav-forest-mid);
+  font-size: 0.55rem;
+  font-weight: 600;
+  color: var(--nav-white);
+}
+
+.blog-header__avatars span:first-child {
+  margin-left: 0;
+  background: var(--brand-azul);
+}
+
+.blog-header__avatars span:nth-child(2) {
+  background: var(--brand-amarillo);
+  color: var(--brand-azul);
+}
+
+.blog-header__avatars span:nth-child(3) {
+  background: var(--brand-acento);
+}
+
+.blog-header__follow {
+  padding: 0.55rem 1.25rem;
+  border: none;
+  border-radius: var(--radius-pill);
+  background: var(--brand-amarillo);
+  color: var(--brand-azul);
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  flex-shrink: 0;
+  box-shadow: 0 4px 10px rgba(240, 208, 81, 0.35);
+  transition: background 0.2s;
+}
+
+.blog-header__follow:hover {
+  background: var(--brand-amarillo-hover);
+}
+
+/* Pestañas del blog */
+.blog-tabs {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  display: flex;
+  gap: 1.75rem;
+  background: var(--nav-sage);
+  border-bottom: 1px solid var(--nav-border);
+}
+
+.blog-tabs a {
+  padding: 0.85rem 0;
+  text-decoration: none;
+  color: var(--nav-text-muted);
+  font-size: 0.9rem;
+}
+
+.blog-tabs a.is-active {
+  color: var(--brand-azul);
+  border-bottom: 2px solid var(--brand-amarillo);
+  margin-bottom: -1px;
+  font-weight: 600;
+}
+
+.blog-tabs a:hover {
+  color: var(--brand-azul-dark);
+}
+
+/* Sección destacada */
+.editor-picks {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+  background: var(--brand-blanco);
+  border-bottom: 1px solid var(--brand-verde);
+}
+
+.editor-picks__label {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--brand-azul);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 1.25rem;
+}
+
+.editor-picks__featured {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.5rem;
+  align-items: start;
+}
+
+.editor-picks__image {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: var(--radius-card);
+  background: var(--brand-crema);
+  border: 1px solid var(--brand-verde);
+}
+
+.editor-picks__title {
+  font-family: "Source Serif 4", Georgia, serif;
+  font-size: 1.65rem;
+  font-weight: 700;
+  line-height: 1.25;
+  margin-bottom: 0.75rem;
+  color: var(--brand-azul);
+}
+
+.editor-picks__title a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.editor-picks__title a:hover,
+.article-card__title a:hover {
+  color: var(--brand-acento);
+}
+
+.editor-picks__excerpt {
+  font-size: 0.95rem;
+  color: var(--nav-text-muted);
+  line-height: 1.6;
+  margin-bottom: 1.25rem;
+}
+
+.article-meta {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.8rem;
+  color: var(--nav-text-muted);
+}
+
+.article-meta__dot {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--brand-amarillo);
+  color: var(--brand-azul);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.6rem;
+  font-weight: 700;
+}
+
+/* Grid de artículos */
+.articles-grid {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 2rem 1.5rem 3rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  border-top: 1px solid var(--brand-verde);
+  background: var(--brand-blanco);
+}
+
+.article-card {
+  background: var(--brand-crema);
+  padding: 1rem;
+  border-radius: var(--radius-card);
+  border: 1px solid var(--brand-verde);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.article-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-card);
+}
+
+.article-card__image {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  margin-bottom: 0.85rem;
+  border-radius: 4px;
+}
+
+.article-card__title {
+  font-family: "Source Serif 4", Georgia, serif;
+  font-size: 1.15rem;
+  font-weight: 700;
+  line-height: 1.3;
+  margin-bottom: 0.5rem;
+  color: var(--brand-azul);
+}
+
+.article-card__title a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.article-card__excerpt {
+  font-size: 0.85rem;
+  color: var(--nav-text-muted);
+  line-height: 1.5;
+  margin-bottom: 0.75rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .editor-picks__featured {
+    grid-template-columns: 1fr;
+  }
+
+  .articles-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .blog-header {
+    flex-direction: column;
+  }
+
+  .blog-tabs {
+    overflow-x: auto;
+  }
+}

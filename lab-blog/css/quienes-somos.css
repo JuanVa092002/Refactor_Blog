@@ -1,0 +1,36 @@
+/* Quiénes Somos — Nataly (paleta unificada) */
+
+.quienes-somos .page-card .sub-heading {
+  color: var(--brand-azul);
+  text-align: center;
+  font-size: 2rem;
+  margin: 0 0 1.25rem;
+}
+
+.quienes-somos .imagen {
+  text-align: center;
+  margin: 2rem 0;
+}
+
+.quienes-somos .imagen img {
+  width: 70%;
+  max-width: 500px;
+  border-radius: var(--radius-card);
+  border: 5px solid var(--brand-verde);
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.quienes-somos .imagen img:hover {
+  transform: scale(1.03);
+  border-color: var(--brand-amarillo);
+}
+
+@media (max-width: 600px) {
+  .quienes-somos .page-card .sub-heading {
+    font-size: 1.6rem;
+  }
+
+  .quienes-somos .imagen img {
+    width: 90%;
+  }
+}
